@@ -124,6 +124,8 @@ public class StartAppTest {
         Thread.sleep(3000);
 
         driver.label("New Note - Details");
+
+        
     }
 
     // @Test
@@ -156,7 +158,7 @@ public class StartAppTest {
     @After
     public void after() throws Exception {
         if (driver != null) {
-            driver.label("Test Completed");
+            //driver.label("Test Completed");
             driver.quit();
         }
     }
