@@ -68,14 +68,14 @@ public class StartAppTest {
     @SuppressWarnings("deprecation")
     @Test
     public void noteCreationTest() throws MalformedURLException, InterruptedException {
-        //driver = startApp();
+        
+        driver.label("App Launched");
 
         //MobileElement elem = Util.findByByOrName(driver, By.id("com.moonpi.swiftnotes:id/newNote"), "+");
         //MobileElement elem = Util.findByByOrName(driver, By.id("com.moonpi.swiftnotes:id/newNote"), "New note");
         //MobileElement elem = Util.findByName(driver, "New note");// driver.findElementByAccessibilityId("New note");
         ////android.widget.ImageButton[@content-desc="New note"]
-        driver.label("App Launched");
-        //File loadScreen = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        
         Thread.sleep(3000);
 
         MobileElement elem = driver.findElementByXPath("//android.widget.ImageButton[@content-desc=\"New note\"]");
@@ -84,15 +84,6 @@ public class StartAppTest {
         Thread.sleep(3000);
         
         driver.label("New Note");
-        
-        //File newNote = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-
-        // MobileElement titleEntry = driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.EditText");
-        // if(titleEntry != null)
-        // {
-        //     String expected = titleEntry.getText();
-        //     assertEquals(expected,"Title");
-        // }
         
         MobileElement el1 = (MobileElement) driver.findElementById("com.moonpi.swiftnotes:id/titleEdit");
         el1.click();
@@ -127,33 +118,6 @@ public class StartAppTest {
 
         
     }
-
-    // @Test
-    // public void NewNoteCreation() throws MalformedURLException, InterruptedException{
-    //     driver = startApp();
-        
-    //     MobileElement el1 = (MobileElement) driver.findElementByAccessibilityId("New note");
-    //     el1.click();
-    //     MobileElement el2 = (MobileElement) driver.findElementById("com.moonpi.swiftnotes:id/bodyEdit");
-    //     el2.click();
-    //     el2.sendKeys("New test note");
-    //     el2.clear();
-    //     el2.sendKeys("new 2nd note");
-    //     MobileElement el3 = (MobileElement) driver.findElementById("com.moonpi.swiftnotes:id/titleEdit");
-    //     el3.click();
-    //     el3.sendKeys("title");
-    //     MobileElement el4 = (MobileElement) driver.findElementByAccessibilityId("More options");
-    //     el4.click();
-    //     MobileElement el5 = (MobileElement) driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.LinearLayout[1]/android.widget.RelativeLayout/android.widget.TextView");
-    //     el5.click();
-    //     MobileElement el6 = (MobileElement) driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.TextView[3]");
-    //     el6.click();
-    //     MobileElement el7 = (MobileElement) driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.view.ViewGroup/android.widget.ImageButton");
-    //     el7.click();
-    //     MobileElement el8 = (MobileElement) driver.findElementById("android:id/button1");
-    //     el8.click();
-    //     Thread.sleep(5000);
-    // }
 
     @After
     public void after() throws Exception {

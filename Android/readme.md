@@ -37,7 +37,7 @@ See Also: [upload.sh](Maven/upload.sh)
 
 
 # About Swiftnotes Sample App
-Within this repo, the sourcecode for this app can be found in the [Espresso/Swiftnotes](../../espresso/swiftnotes) folder. That folder also contains the LICENSE file for the sample.
+Within this repo, the sourcecode for this app can be found in the [Espresso/Swiftnotes](https://github.com/adbarlow/SwiftNotes-Espresso-XTC) folder. That folder also contains the LICENSE file for the sample.
 
 ## License
 Copyright &copy; 2017 Adrian Chifor
